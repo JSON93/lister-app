@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "lister-app": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lister-app"
+    }
+  },
+  "defaultProject": "lister-app",
+  "cli": {
+    "analytics": "f99a4540-cb69-4c5d-ad71-75fb4b74fd7b"
+  }
 }

@@ -1,0 +1,36 @@
+<div class="jumbotron" style="padding:45p 0px;">
+  <h4 class="text-center">Lister App</h4>
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" #itemTitle />
+  <div class="input-group-addon hover-cursor">
+    <button (click)="onAdd(itemTitle)">
+      <mat-icon>Add</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div style="margin:5px 0px">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of listerArray">
+      <span
+        class="hover-cursor"
+        [class.text-success]="item.isChecked"
+        (click)="alterCheck(item.$key, item.isChecked)"
+      >
+        <i
+          class="fa fa-lg"
+          [ngClass]="item.isChecked ? 'fa-check-circle-o' : 'fa-circle-thin'"
+        ></i>
+      </span>
+      {{ item.title }}
+      <span
+        class="hover-cursor text-danger pull-right"
+        (click)="onDelete(item.$key)"
+      >
+        <i class="fa fa-trash-o fa-lg"></i>
+      </span>
+    </li>
+  </ul>
+</div>
